@@ -1,0 +1,274 @@
+.project-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-image-wrapper {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.project-card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.project-card:hover .project-card-image {
+  transform: scale(1.05);
+}
+
+.project-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.project-card-title-section {
+  flex: 1;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-card-student-info {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.project-card-icon {
+  height: 12px;
+  width: 12px;
+}
+
+.project-card-badge {
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #f1f5f9;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.project-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-card-description {
+  font-size: 0.875rem;
+  color: #64748b;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+.project-card-progress-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-card-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.project-card-progress-label {
+  color: #64748b;
+}
+
+.project-card-progress-value {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.project-card-progress-bar {
+  height: 8px;
+  width: 100%;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.project-card-progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 9999px;
+  transition: width 0.3s;
+}
+
+.project-card-feedback {
+  border-radius: 8px;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.project-card-feedback-title {
+  font-weight: 500;
+  color: #667eea;
+  margin: 0 0 0.25rem 0;
+}
+
+.project-card-feedback-text {
+  color: #64748b;
+  margin: 0;
+}
+
+.project-card-date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.project-card-footer {
+  display: flex;
+  gap: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+  background: rgba(241, 245, 249, 0.3);
+  padding: 0.75rem;
+}
+
+.project-card-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.project-card-btn-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.project-card-btn-edit {
+  background: transparent;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.project-card-btn-edit:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.project-card-btn-delete {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: white;
+}
+
+.project-card-btn-delete:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.modal-description {
+  color: #64748b;
+  margin: 0 0 1.5rem 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-btn-cancel {
+  background: transparent;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.modal-btn-cancel:hover {
+  background: #f1f5f9;
+}
+
+.modal-btn-delete {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: white;
+}
+
+.modal-btn-delete:hover {
+  background: #b91c1c;
+}
