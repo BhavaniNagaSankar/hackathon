@@ -7,7 +7,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/hackathon/">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/signin" element={<SignIn />} />
